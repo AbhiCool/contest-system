@@ -261,6 +261,9 @@ exports.submitContest = async (req, res, next) => {
     res.status(201).json({
       success: true,
       message: "Contest submitted successfully",
+      data: {
+        score,
+      },
     });
   } catch (error) {
     next(error);
